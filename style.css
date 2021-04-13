@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  background: url(1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(3px);
+}
+
+#typeText {
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 600;
+  text-shadow: 3px 2px 5px rgb(0, 0, 0);
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+#typeText::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
